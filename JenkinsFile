@@ -1,14 +1,14 @@
 pipeline{
-    agent any;
+     agent any;
     
-    stages{
-        stage{'build'}{
+     stages{
+        stage {'build'}{
             steps {
             sh 'apk add perl bash';
             sh 'perl -c program.pl';
             }
-        }
-        stage {'test'}{
+         }
+         stage {'test'}{
             steps {
                 sh 'bash test.sh';
             }
